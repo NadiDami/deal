@@ -24,7 +24,7 @@ class OffersController < ApplicationController
 		if @offer.save
 			redirect_to dashboard_path
 		else
-			flash[:notice] = 'Sorry, there were the following errors: @offer.errors.full_messages'
+			flash[:notice] = "Sorry, there were the following errors: #{@offer.errors.full_messages}"
 			render 'offers/new'
 		end
 	end
